@@ -3,26 +3,24 @@
 document.title = "Hello AltCampus";
 
 // 2. Select the element using the children property:
-
+ 
 //    - Select the `h1` element and change the value to `Learning DOM`
 
-let h1 = document.querySelector(`#test`);
+document.body.children[0].innerText = "Learning DOM";
 
-h1.innerText = "Learning DOM";
 
 //    - Select the first `li` element inside the `ul` with class `topics` and change the innerText to `all about document`
 
-let list = document.querySelector(`.topics`);
-list.firstElementChild.innerText = "all about document";
+document.body.children[5].children[0].innerText = `all about document`;
 
 //    - Select the input element with name `email`
 
-document.querySelectorAll(`input`);
+document.body.children[6].children[2];
 
 // 3. Log the number (using console.log) of children of all the `li` element inside the ul with class `topics`
 
-let data = document.querySelector(`.topics`);
-console.log(data.querySelectorAll(`li`).length);
+let data = document.body.children[5];
+console.log(data.children.length);
 
 // 4. Select the first input using the `type` selector and store them in variable named `emailInput`
 
@@ -68,7 +66,7 @@ let listOfSelectedTopics = document.querySelectorAll(`.list`);
 
 // 14. Select the first li element inside the `ul` element using `>` (direct child) and store in `firstLi`
 
-let firstLi = topics.firstElementChild;
+let firstLi = document.querySelector(`ul>li`);
 
 // 15. Select all the img element and log the number of element saying `The total number of img element is ---`
 
@@ -96,29 +94,24 @@ let getElementById = document.getElementById(`test`);
 
 // 21. Select the parent element of the element stored in `topics` variable (#5) and log the element.
 
-let topics = document.querySelectorAll(".topics");
-console.log(topics.children[5]);
+
+console.log(topics.parentElement);
 
 // 22. Select the next element sibling of the element stored in `topics` variable (#5) and log the element.
 
-let topics = document.querySelector(`.topics`);
-console.log(topics.nextElementSibling[5]);
+console.log(topics.nextElementSibling);
 
 // 23. Select the previous element sibling of the element stored in `topics` variable (#5) and change the `innerText` property to `Learning About Walking the DOM`.
 
-let prevElm = document.querySelector(`.topics`);
-let fifth = prevElm.children[5];
-let final = fifth.previousElementSibling.innerText = `Learning About Walking the DOM`;
+topics.previousElementSibling.innerText = `Learning About Walking the DOM`;
 // 24. Select the first element child of the element stored in `topics` variable (#5) and change the `innerText` property of the element to `This is the first child element`.
 
-let firstChild = document.querySelector(`.topics`);
-firstChild.firstElementChild.innerText = "This is the first child element";
+topics.firstElementChild.innerText = "This is the first child element";
 
 // 25. Select the last element child of the element stored in `topics` variable (#5) and log the `typeof` the element.
 
-let lastElm = document.querySelector(`.topics`);
-let last = lastElm.lastElementChild;
-console.log(typeof (last));
+console.log( typeof topics.lastElementChild);
+
 
 // 26. Select the element with type `fieldset` and store in a variable named `fieldsetElm`.
 
@@ -126,5 +119,4 @@ let fieldsetElm = document.querySelector(`fieldset`);
 
 // 27. Select the parent element of the element stored in `fieldsetElm` variable (#5) and log the `typeof` the element.
 
-fieldsetElm.parentElement;
-console.log(typeof(fieldsetElm))
+console.log(typeof fieldsetElm.parentElement);
