@@ -38,7 +38,7 @@ for (let all of allHrsArray) {
 
 // Change the 'border-radius' of all the hr to "5px" using array.
 
-allHrsArray.forEach((elm) => (elm.style.borderRadius = "5px"));
+allHrsArray.forEach(elm => elm.style.borderRadius = "5px");
 
 
 // Change the alignment of the heading(h1) to center.
@@ -75,13 +75,13 @@ para.innerText =
 
 // Remove all the elements from box 1
 
-let rm = document.querySelector(`hr`);
-rm.remove()
+let rm = document.querySelector(`.one`);
+rm.innerHTML = "";
 
 // Replace all the elements inside box 1 with the para (you created above)
 
-let one = document.querySelector(`.box`);
-one.prepend(para);
+
+rm.append(para);
 
 /* Walking the DOM
 Do the following after selecting box 16 and storing in variable named box16
@@ -102,9 +102,18 @@ Do the following after selecting box 16 and storing in variable named box16
   - Focus on the difference between element and node
 */
 
-let box16 = document.querySelectorAll(`.box`);
-box16[15]
+let box16 = document.querySelector(`.sixteen`);
+box16.parentElement;
+box16.childNodes;
+box16.previousSibling;
+box16.nextSibling;
+box16.firstChild;
+box16.lastChild;
 
+box16.previousElementSibling;
+box16.nextElementSibling;
+box16.firstElementChild;
+box16.lastElementChild;
 // Select box 2 and append a new paragraph element with content "Append inserts as last child" just after hr element.
 
 let box2 = document.body.children[0].children[1].children[1];
@@ -207,7 +216,8 @@ rm4[8].append(btn);
 
 // Create a img element with src value `https://images.unsplash.com/photo-1592500595497-d1f52a40b207?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=400&q=80` and store in a variable named imgElm
 
-let imgElm = document.createElement(`img`);imgElm.src = `https://images.unsplash.com/photo-1592500595497-d1f52a40b207?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=400&q=80`;
+let imgElm = document.createElement(`img`);
+ imgElm.src = `https://images.unsplash.com/photo-1592500595497-d1f52a40b207?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=400&q=80`;
 
 // Select the box 7 using class seven
 
