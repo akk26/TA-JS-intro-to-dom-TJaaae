@@ -25,8 +25,7 @@ createInputElm('Your age', 'number'); //<label>Your age: <input type="number"></
 // Your code goes here
 
 function createInputElm(label, type = "text") {
-  
-  return `<label>${label}: <input type=${type}></label>` ;
+  return `<label>${label}: <input type=${type}></label>`;
 } 
 
 // TEST
@@ -73,15 +72,16 @@ createList(['Afghanistan', 'Antarctica', 'Congo', 'Estonia']);
       para.append(elm.name)
       let input = document.createElement(`input`);
       input.setAttribute(`type`, `checkbox`);
-      input.setAttribute(`checked`,elm.isDone);
-      input.setAttribute(`name`, "");
-      input.setAttribute(`id`, "");
+      input.setAttribute(`checked`, elm.isDone);
+      input.checked = elm.isDone ? true : false ;
+      input.setAttribute(`name`,"" );
+      input.setAttribute(`id`,"");
       let span = document.createElement(`span`);
       span.innerText = "X";
-      ul.append(li);
       li.append(para);
       li.append(input);
       li.append(span);
+      ul.append(li);
     });
     return ul;
   }
